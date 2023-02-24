@@ -11,7 +11,7 @@ export class CarouselItemComponent implements OnInit {
     /**
      * Reference to the template containing the content so we can make a Template Portal
      */
-    @ViewChild(TemplateRef, { static: true }) contentTemplate: TemplateRef<any>;
+    @ViewChild(TemplateRef, {}) contentTemplate: TemplateRef<any>;
 
     /**
      * The template portal to use in the carousel item body

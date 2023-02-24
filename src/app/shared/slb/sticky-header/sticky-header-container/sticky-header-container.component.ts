@@ -10,7 +10,7 @@ const componentSelector = 'slb-sticky-header-container';
 export class StickyHeaderContainerComponent extends BasePortalOutlet {
     @HostBinding(`class.${componentSelector}`) readonly cssClass = true;
 
-    @ViewChild(CdkPortalOutlet, { static: true }) private portalOutlet: CdkPortalOutlet;
+    @ViewChild(CdkPortalOutlet, {}) private portalOutlet: CdkPortalOutlet;
 
     constructor() {
         super();

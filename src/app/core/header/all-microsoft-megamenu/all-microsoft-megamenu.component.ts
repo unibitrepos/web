@@ -14,7 +14,7 @@ export class AllMicrosoftMegamenuComponent {
 
     tabIndex = null;
 
-    @ViewChild('mainPanel', { static: true }) mainPanel: NavMenuPanelDirective;
+    @ViewChild('mainPanel', { static: true } as any) mainPanel: NavMenuPanelDirective;
     @ViewChildren(NavMenuPanelDirective) private panels: QueryList<NavMenuPanelDirective>;
 
     /**

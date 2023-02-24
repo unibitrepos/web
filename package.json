@@ -7,7 +7,7 @@
     "build": "ng build",
     "build:styles": "node-sass --importer=node_modules/node-sass-tilde-importer src/sass/styles.scss dist/css/styles.css",
     "build:styles:min": "node-sass --importer=node_modules/node-sass-tilde-importer --output-style=compressed src/sass/styles.scss dist/css/styles.min.css",
-    "build:ssr": "ng run SharePoint.Portal.Web:server:dev",
+    "build:ssr": "ng run clientapp:server:dev",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -26,10 +26,11 @@
     "@angular/platform-browser-dynamic": "^6.0.0",
     "@angular/platform-server": "^6.0.0",
     "@angular/router": "^6.0.0",
-    "core-js": "^2.5.4",
+    "@nguniversal/module-map-ngfactory-loader": "^8.2.6",
+    "core-js": "^3.2.1",
     "material-design-icons": "^3.0.1",
     "moment": "^2.24.0",
-    "rxjs": "^6.0.0",
+    "rxjs": "6.0.0",
     "scss-compile": "^0.1.7",
     "zone.js": "^0.8.26"
   },

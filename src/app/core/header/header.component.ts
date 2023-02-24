@@ -36,11 +36,11 @@ export class HeaderComponent implements OnInit, AfterViewInit, OnDestroy {
     isSmallScreen = false;
     isLargeScreen = false;
 
-    @ViewChild('menuElement', { static: false }) private menuElement: ElementRef;
+    @ViewChild('menuElement', { static: false }as any) private menuElement: ElementRef;
 
-    @ViewChild('megamenuElement', { static: true }) private megamenuElement: ElementRef;
-    @ViewChild('megamenuTogglerElement', { static: true }) private megamenuTogglerElement: ElementRef;
-    @ViewChild('microsoftMegamenu', { static: false }) private microsoftMegamenu: AllMicrosoftMegamenuComponent;
+    @ViewChild('megamenuElement', { static: true }as any) private megamenuElement: ElementRef;
+    @ViewChild('megamenuTogglerElement', { static: true }as any) private megamenuTogglerElement: ElementRef;
+    @ViewChild('microsoftMegamenu', { static: false }as any) private microsoftMegamenu: AllMicrosoftMegamenuComponent;
     private currentOpenMenu: NavMenuItemComponent;
     private categoriesMenuItem: NavMenuItem;
 
@@ -99,7 +99,7 @@ export class HeaderComponent implements OnInit, AfterViewInit, OnDestroy {
                     this.closeMainMenu();
                     this.closeMicrosoftMegamenu();
                 }
-                this.isLargeScreen = state.breakpoints[appConstants.mediaBreakpointUp.lg];
+                // this.isLargeScreen = (state as any)?.breakpoints[appConstants.mediaBreakpointUp.lg];
                 this.overflowUpdate();
             });
 

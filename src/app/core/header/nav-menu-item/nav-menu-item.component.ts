@@ -21,8 +21,8 @@ export class NavMenuItemComponent implements AfterViewChecked {
     @Output() closed = new EventEmitter<NavMenuItemComponent>();
     @Output() itemSelected = new EventEmitter<NavMenuItem>();
 
-    @ViewChild('navMenuPanel', { static: false }) menuPanel: NavMenuPanelDirective;
-    @ViewChild('menuPanelElement', { static: false }) private menuPanelElement: ElementRef;
+    @ViewChild('navMenuPanel', {}) menuPanel: NavMenuPanelDirective;
+    @ViewChild('menuPanelElement', {}) private menuPanelElement: ElementRef;
 
     get menuPanelHeight(): number {
         if (!this.menuPanelElement) {

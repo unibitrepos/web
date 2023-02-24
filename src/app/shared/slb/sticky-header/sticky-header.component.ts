@@ -21,8 +21,8 @@ const componentSelector = 'slb-sticky-header';
 export class StickyHeaderComponent implements OnInit, OnDestroy, AfterContentInit {
     @Output() stickied = new EventEmitter<boolean>();
 
-    @ViewChild('template', { static: true }) private contentTemplate: TemplateRef<any>;
-    @ViewChild(CdkPortalOutlet, { static: true }) private portalOutlet: CdkPortalOutlet;
+    @ViewChild('template', {}) private contentTemplate: TemplateRef<any>;
+    @ViewChild(CdkPortalOutlet, {}) private portalOutlet: CdkPortalOutlet;
     @ContentChildren(StickyHeaderContentClassDirective) private contentChildren: QueryList<StickyHeaderContentClassDirective>;
     private overlayRef: OverlayRef;
     private content: TemplatePortal;

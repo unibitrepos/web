@@ -4,7 +4,6 @@ import {
     ContentChildren, QueryList, ChangeDetectionStrategy, ViewChildren, AfterViewInit,
 } from '@angular/core';
 import { FocusKeyManager } from '@angular/cdk/a11y';
-import { hasModifierKey } from '@angular/cdk/keycodes';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
@@ -93,9 +92,9 @@ export class TabGroupComponent implements OnDestroy, AfterViewInit, AfterContent
     }
 
     handleLabelWrapperKeydown(event: KeyboardEvent) {
-        if (hasModifierKey(event)) {
-            return;
-        }
+        // if (hasModifierKey(event)) {
+        //     return;
+        // }
 
         switch (event.key) {
             case 'Home':
